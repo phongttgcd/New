@@ -108,7 +108,6 @@ class CategoryController extends AbstractController
         if ($form->isSubmitted() && $form->isValid()) {
             $category->setName($request->request->get('category')['name']);
 
-
             $em = $this->getDoctrine()->getManager();
             $em->persist($category);
             $em->flush();
